@@ -1,14 +1,7 @@
-# terraform {
-#   backend "local" {
-#     path = "../state/terraform.tfstate"
-#   }
-# }
-
-#backend should be more like below, when this has been created.
 terraform {
   backend "azurerm" {
-    resource_group_name  = "tfstate"
-    storage_account_name = "tfstatestorage2919"
+    resource_group_name  = "tfstate-rg"
+    storage_account_name = "tfstagestate0610g"
     container_name       = "tfstate"
     key                  = "terraform.tfstate"
   }
